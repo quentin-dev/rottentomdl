@@ -8,7 +8,7 @@ pageValidation = False
 while pageValidation == False:
     try :
         movieName = str(input("What movie review do you want to download ? "))
-        url = "https://www.rottentomatoes.com/m/" + movieName
+        url = "https://www.rottentomatoes.com/m/" + movieName #.lower()
         response = urllib.request.urlopen(url)
         webContent = str(response.read().decode("utf-8"))
         pageValidation = True
